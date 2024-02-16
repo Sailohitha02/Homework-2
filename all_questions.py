@@ -64,14 +64,14 @@ def question1():
 
     # Fill up `construct_tree``
     # tree, training_error = construct_tree()
-    tree = u.BinaryTree("smoking")  # MUST STILL CREATE THE TREE *****
+    tree = u.BinaryTree("smoking")
     A = tree.insert_left("cough")
     B = tree.insert_right("radon")
     A.insert_left("Yes")
     A.insert_right("No")
     B.insert_left("Yes")
     B.insert_right("No")
-    answer["tree"] = tree  # use the Tree structure
+    answer["tree"] = tree
     # answer["training_error"] = training_error
     answer["training_error"] = 0.0  
 
@@ -169,7 +169,7 @@ def question4():
     answer["h: explain"] = "ISBN numbers for books are discrete qualitative attributes, representing unique identifiers without inherent order."
 
     answer["i"] = ['discrete','qualitative','ordinal']
-    answer["i: explain"] = "Ability to pass light, categorized as opaque, translucent, or transparent, is a discrete qualitative attribute, ordered by increasing light transmission"
+    answer["i: explain"] = "Ability to pass light, categorized as opaque, translucent, or transparent, is a discrete qualitative attribute, ordered by increasing light transmission."
 
     answer["j"] = ['discrete','qualitative','ordinal']
     answer["j: explain"] = "Military rank is a discrete qualitative attribute, ordered hierarchically from lowest to highest rank."

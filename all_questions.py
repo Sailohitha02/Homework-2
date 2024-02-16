@@ -86,18 +86,33 @@ def question2():
 
 
     # Answers are floats
-    answer["(a) entropy_entire_data"] = 0.
+    answer["(a) entropy_entire_data"] = 1.425364
     # Infogain
-    answer["(b) x <= 0.2"] = 0.
-    answer["(b) x <= 0.7"] = 0.
-    answer["(b) y <= 0.6"] = 0.
+    answer["(b) x <= 0.2"] = 0.17739
+    answer["(b) x <= 0.7"] = 0.35570
+    answer["(b) y <= 0.6"] = 0.34781
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
-    answer["(c) attribute"] = ""  
+    answer["(c) attribute"] = "x < 0.7"  
 
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
-    tree = u.BinaryTree("Root")
+    tree = u.BinaryTree("x < 0.7")
+    
+    A = tree.insert_left("y < 0.6")
+    A.insert_left("B")
+    C=A.insert_right("x < 0.2")
+    D=C.insert_left("y < 0.8")
+    C.insert_right("A")
+    D.insert_left("C")
+    D.insert_right("B")
+
+    B = tree.insert_right("y < 0.6")
+    E=B.insert_left("x < 0.3")
+    B.insert_right("A")
+    E.insert_left("C")
+    E.insert_right("B")
+    
     answer["(d) full decision tree"] = tree
 
     return answer
@@ -216,11 +231,11 @@ def question6():
     # value of the form "z <= float" where "z" is "x" or "y"
     #  and "float" is a floating point number (notice: <=)
     # The value could also be "A" or "B" if it is a leaf
-    answer["a, level 1"] = "x = 0.5"
+    answer["a, level 1"] = "x <= 0.5"
     answer["a, level 2, right"] ="A"
-    answer["a, level 2, left"] = "y = 0.4"
+    answer["a, level 2, left"] = "y <= 0.4"
     answer["a, level 3, left"] = "A"
-    answer["a, level 3, right"] = "B"
+    answer["a, level 3, right"] = "x = 0.2"
 
     # run each datum through the tree. Count the number of errors and divide by number of samples. .
     # Since we have areas: calculate the area that is misclassified (total area is unity)
@@ -229,8 +244,12 @@ def question6():
 
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
-    tree = u.BinaryTree("root note")
+    tree = u.BinaryTree("x <= 0.5")
+    A=tree.insert_left("y <= 0.4")
+    C=A.insert_left('A')
+    A.insert_right('x <= 0.2')
 
+    B=tree.insert_right("A")
     answer["c, tree"] = tree
 
     return answer

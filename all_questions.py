@@ -204,6 +204,7 @@ def question5():
     explain["c similarity explain"] = "Both techniques impose penalties to prevent models from overfitting the training data. MDL penalizes model complexity through encoding cost. Pessimistic error penalizes complexity through error adjustment."
     explain["c difference"] = "Model Optimization Criterion"
     explain["c difference explain"] = "MDL aims to minimize description length, preferring simpler models that encode data more concisely.Pessimistic error aims to minimize penalized error rate directly, by adjusting error higher for more complex models"
+    return explain  # Returning the explain dictionary
 
 
 # ----------------------------------------------------------------------

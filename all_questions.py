@@ -64,14 +64,14 @@ def question1():
 
     # Fill up `construct_tree``
     # tree, training_error = construct_tree()
-    tree = u.BinaryTree("smoking")
+    tree = u.BinaryTree("smoking")  # MUST STILL CREATE THE TREE *****
     A = tree.insert_left("cough")
     B = tree.insert_right("radon")
     A.insert_left("Yes")
     A.insert_right("No")
     B.insert_left("Yes")
     B.insert_right("No")
-    answer["tree"] = tree
+    answer["tree"] = tree  # use the Tree structure
     # answer["training_error"] = training_error
     answer["training_error"] = 0.0  
 
@@ -123,7 +123,7 @@ def question3():
     answer["(f) attr for splitting"] = "Car type"
 
     # Explanatory text string
-    answer["(f) explain choice"] = "The Car type attribute yields the lowest Gini index, indicating better purity of subsets after splitting, making it the optimal choice for the root node."
+    answer["(f) explain choice"] = "The Car type attribute has the lowest Gini index, suggesting that it leads to more pure subsets after splitting. This makes it the best choice for the root node in our analysis."
     return answer
 
 
@@ -146,39 +146,39 @@ def question4():
     answer["a"] = ['binary','qualitative','ordinal']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
-    answer["a: explain"] = "Time in terms of AM or PM is a binary qualitative attribute, representing two distinct categories."
+    answer["a: explain"] = "Time, categorized as either AM or PM, is a binary qualitative attribute that falls into two clear categories."
 
     answer["b"] = ['continuous','quantitative','ratio']
-    answer["b: explain"] = "Brightness measured by a light meter is a continuous quantitative attribute, measurable on a ratio scale"
+    answer["b: explain"] = "The brightness, as assessed by a light meter, is a quantitative attribute that exists on a continuous scale with ratio properties."
 
     answer["c"] = ['discrete','qualitative','ordinal']
-    answer["c: explain"] = "Brightness measured by people's judgments can be considered continuous, qualitative, and ordinal as it represents subjective perceptions ordered by intensity."
+    answer["c: explain"] = "People's judgments of brightness can be seen as a continuous, qualitative attribute with an ordinal nature, reflecting subjective perceptions arranged by intensity."
 
     answer["d"] = ['continuous','quantitative','ratio']
-    answer["d: explain"] = "Angles measured in degrees between 0 and 360 are continuous quantitative attributes, representing ratios on a scale."
+    answer["d: explain"] = "Angles, quantified in degrees within the range of 0 to 360, are continuous quantitative attributes that indicate ratios on a scale."
 
     answer["e"] = ['discrete','qualitative','ordinal']
-    answer["e: explain"] = "Bronze, Silver, and Gold medals at the Olympics are discrete qualitative attributes, ordered by rank."
+    answer["e: explain"] = "The Olympic medals, categorized as Bronze, Silver, and Gold, are discrete qualitative attributes arranged in order based on rank."
 
     answer["f"] = ['continuous','quantitative','interval']
-    answer["f: explain"] = "Height above sea level is a continuous quantitative attribute, potentially interval or ratio if the sea level is treated as an arbitrary origin and ratios between heights are meaningful."
+    answer["f: explain"] = "Height above sea level is a continuous quantitative attribute, potentially interval or ratio if ratios between heights are meaningful and sea level serves as an arbitrary origin."
     answer["g"] = ['discrete','quantitative','ratio']
-    answer["g: explain"] = "Number of patients in a hospital is a discrete quantitative attribute, measurable on a ratio scale."
+    answer["g: explain"] = "The count of patients in a hospital is a discrete quantitative attribute, measurable on a ratio scale."
 
     answer["h"] = ['discrete','qualitative','nominal']
-    answer["h: explain"] = "ISBN numbers for books are discrete qualitative attributes, representing unique identifiers without inherent order."
+    answer["h: explain"] = "ISBN numbers assigned to books are discrete qualitative attributes, serving as unique identifiers without any inherent order."
 
     answer["i"] = ['discrete','qualitative','ordinal']
-    answer["i: explain"] = "Ability to pass light, categorized as opaque, translucent, or transparent, is a discrete qualitative attribute, ordered by increasing light transmission."
+    answer["i: explain"] = "The ability to transmit light, classified as opaque, translucent, or transparent, is a qualitative attribute with discrete categories, arranged in ascending order based on increasing light transmission."
 
     answer["j"] = ['discrete','qualitative','ordinal']
-    answer["j: explain"] = "Military rank is a discrete qualitative attribute, ordered hierarchically from lowest to highest rank."
+    answer["j: explain"] = "Military rank is a qualitative attribute with discrete categories, organized hierarchically from the lowest to the highest rank."
 
     answer["k"] = ['continuous','quantitative','ratio']
-    answer["k: explain"] = "Distance from the center of campus is a continuous quantitative attribute, potentially interval or ratio if the center is treated as an arbitrary origin and ratios between distances are meaningful."
+    answer["k: explain"] = "The distance from the campus center is a continuous quantitative attribute, potentially interval or ratio if the campus center is considered an arbitrary origin and ratios between distances are meaningful."
 
     answer["l"] = ['discrete','quantitative','ratio']
-    answer["l: explain"] = "Density of a substance in grams per cubic centimeter is a continuous quantitative attribute, measurable on a ratio scale."
+    answer["l: explain"] = "The substance's density, measured in grams per cubic centimeter, is a continuous quantitative attribute, assessable on a ratio scale."
 
     answer["m"] = ['discrete','qualitative','nominal']
     answer["m: explain"] = "Coat check number is a discrete qualitative attribute, representing distinct categories without intrinsic order."
@@ -199,9 +199,9 @@ def question5():
     explain["a explain"] = " Model 2 is expected to perform better on unseen instances as it maintains similar accuracies on both datasets, indicating superior generalization compared to Model 1, where the drop in accuracy from Dataset A to B suggests overfitting."
     # string: one of 'Model 1' or 'Model 2'
     explain["b"] = "Model 2"
-    explain["b explain"] = "Despite a slight decrease in accuracy, Model 2 remains preferable due to its observed better generalization, making it less prone to overfitting compared to Model 1, which exhibited a significant drop in accuracy on Dataset B."
+    explain["b explain"] = "Even though Model 2 is a bit less accurate, it's still a better choice because it generalizes well and is less likely to overfit. In contrast, Model 1 had a big drop in accuracy on Dataset B."
     explain["c similarity"] = "Regularization Approach to Avoid Overfitting"
-    explain["c similarity explain"] = "Both techniques impose penalties to prevent models from overfitting the training data. MDL penalizes model complexity through encoding cost. Pessimistic error penalizes complexity through error adjustment."
+    explain["c similarity explain"] = "Both methods use penalties to stop models from fitting too closely to the training data. MDL penalizes complex models by considering encoding cost. Pessimistic error penalizes complexity by adjusting for errors."
     explain["c difference"] = "Model Optimization Criterion"
     explain["c difference explain"] = "MDL aims to minimize description length, preferring simpler models that encode data more concisely.Pessimistic error aims to minimize penalized error rate directly, by adjusting error higher for more complex models."
 

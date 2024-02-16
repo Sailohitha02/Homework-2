@@ -146,13 +146,13 @@ def question4():
     answer["a"] = ['binary','qualitative','ordinal']
 
     # Explain if there is more than one interpretation. Repeat for the other questions. At least five words that form a sentence.
-    answer["a: explain"] = "Time, categorized as either AM or PM, is a binary qualitative attribute that falls into two clear categories."
+    answer["a: explain"] = "Time in terms of AM or PM is a binary qualitative attribute, representing two distinct categories."
 
     answer["b"] = ['continuous','quantitative','ratio']
     answer["b: explain"] = "The brightness, as assessed by a light meter, is a quantitative attribute that exists on a continuous scale with ratio properties."
 
     answer["c"] = ['discrete','qualitative','ordinal']
-    answer["c: explain"] = "People's judgments of brightness can be seen as a continuous, qualitative attribute with an ordinal nature, reflecting subjective perceptions arranged by intensity."
+    answer["c: explain"] = "Brightness measured by people's judgments can be considered continuous, qualitative, and ordinal as it represents subjective perceptions ordered by intensity."
 
     answer["d"] = ['continuous','quantitative','ratio']
     answer["d: explain"] = "Angles, quantified in degrees within the range of 0 to 360, are continuous quantitative attributes that indicate ratios on a scale."
@@ -161,12 +161,12 @@ def question4():
     answer["e: explain"] = "The Olympic medals, categorized as Bronze, Silver, and Gold, are discrete qualitative attributes arranged in order based on rank."
 
     answer["f"] = ['continuous','quantitative','interval']
-    answer["f: explain"] = "Height above sea level is a continuous quantitative attribute, potentially interval or ratio if ratios between heights are meaningful and sea level serves as an arbitrary origin."
+    answer["f: explain"] = "Height above sea level is a continuous quantitative attribute, potentially interval or ratio if the sea level is treated as an arbitrary origin and ratios between heights are meaningful."
     answer["g"] = ['discrete','quantitative','ratio']
     answer["g: explain"] = "The count of patients in a hospital is a discrete quantitative attribute, measurable on a ratio scale."
 
     answer["h"] = ['discrete','qualitative','nominal']
-    answer["h: explain"] = "ISBN numbers assigned to books are discrete qualitative attributes, serving as unique identifiers without any inherent order."
+    answer["h: explain"] = "ISBN numbers for books are discrete qualitative attributes, representing unique identifiers without inherent order."
 
     answer["i"] = ['discrete','qualitative','ordinal']
     answer["i: explain"] = "The ability to transmit light, classified as opaque, translucent, or transparent, is a qualitative attribute with discrete categories, arranged in ascending order based on increasing light transmission."
@@ -178,7 +178,7 @@ def question4():
     answer["k: explain"] = "The distance from the campus center is a continuous quantitative attribute, potentially interval or ratio if the campus center is considered an arbitrary origin and ratios between distances are meaningful."
 
     answer["l"] = ['discrete','quantitative','ratio']
-    answer["l: explain"] = "The substance's density, measured in grams per cubic centimeter, is a continuous quantitative attribute, assessable on a ratio scale."
+    answer["l: explain"] = "Density of a substance in grams per cubic centimeter is a discrete quantitative attribute, representing distinct values measured on a ratio scale."
 
     answer["m"] = ['discrete','qualitative','nominal']
     answer["m: explain"] = "Coat check number is a discrete qualitative attribute, representing distinct categories without intrinsic order."
@@ -201,9 +201,9 @@ def question5():
     explain["b"] = "Model 2"
     explain["b explain"] = "Even though Model 2 is a bit less accurate, it's still a better choice because it generalizes well and is less likely to overfit. In contrast, Model 1 had a big drop in accuracy on Dataset B."
     explain["c similarity"] = "Regularization Approach to Avoid Overfitting"
-    explain["c similarity explain"] = "Both methods use penalties to stop models from fitting too closely to the training data. MDL penalizes complex models by considering encoding cost. Pessimistic error penalizes complexity by adjusting for errors."
+    explain["c similarity explain"] = "Both techniques impose penalties to prevent models from overfitting the training data. MDL penalizes model complexity through encoding cost. Pessimistic error penalizes complexity through error adjustment."
     explain["c difference"] = "Model Optimization Criterion"
-    explain["c difference explain"] = "MDL aims to minimize description length, preferring simpler models that encode data more concisely.Pessimistic error aims to minimize penalized error rate directly, by adjusting error higher for more complex models."
+    explain["c difference explain"] = "MDL aims to minimize description length, preferring simpler models that encode data more concisely.Pessimistic error aims to minimize penalized error rate directly, by adjusting error higher for more complex models"
 
 
 # ----------------------------------------------------------------------
